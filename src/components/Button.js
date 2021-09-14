@@ -4,6 +4,8 @@ import Block from './Block';
 import Text from './Text';
 import {light} from './theme/colors';
 import {t1, t2} from './theme/fontsize';
+import LinearGradient from 'react-native-linear-gradient';
+
 const componentStyles = () => {
   return StyleSheet.create({
     button: {
@@ -18,9 +20,6 @@ const componentStyles = () => {
       shadowOpacity: 0.1,
       shadowRadius: 10,
     },
-    disabledButton: {
-      backgroundColor: '#00000052',
-    },
     circular: {
       borderRadius: 20,
       padding: 20,
@@ -34,7 +33,7 @@ const componentStyles = () => {
       borderWidth: 0,
     },
     accent: {backgroundColor: 'red'},
-    primary: {backgroundColor: '#000', paddingVertical: t1 * 1.5},
+    primary: {backgroundColor: '#000', paddingVertical: t1 * 2.2},
     secondary: {
       backgroundColor: light.secondary,
       paddingVertical: t1 * 1.5,
@@ -66,6 +65,7 @@ const Button = ({
   isLoading,
   disabled,
   borderColor,
+  linear,
   ...rest
 }) => {
   const styles = componentStyles();
@@ -84,7 +84,7 @@ const Button = ({
     return <Block style={buttonStyles}>{icon}</Block>;
   }
 
-  const colorType = (type) => {
+  const colorType = type => {
     switch (type) {
       case 'secondary':
         return '#fff';
@@ -95,6 +95,32 @@ const Button = ({
     }
   };
 
+  // start 53E88B
+
+  if (linear) {
+    return (
+      <TouchableOpacity
+        activeOpacity={disabled ? opacity || 0.8 : 0.2}
+        disabled={!!disabled}
+        {...rest}>
+        <LinearGradient
+          start={{x: 0, y: 0}}
+          end={{x: 1, y: 0}}
+          colors={disabled ? ['#302a2e', '#302a2e'] : ['#53E88B', '#15BE77']}
+          style={[buttonStyles, disabled && styles.disabledButton]}
+          activeOpacity={disabled ? opacity || 0.8 : 0.2}
+          {...rest}>
+          {isLoading ? (
+            <ActivityIndicator size="small" color="#ffffff" />
+          ) : (
+            <Text bold center regular h1 size={size || 17} color={'white'}>
+              {children}
+            </Text>
+          )}
+        </LinearGradient>
+      </TouchableOpacity>
+    );
+  }
   return (
     <TouchableOpacity
       style={[buttonStyles, disabled && styles.disabledButton]}
@@ -104,7 +130,7 @@ const Button = ({
       {isLoading ? (
         <ActivityIndicator size="small" color="#ffffff" />
       ) : (
-        <Text center bold h1 size={size || 17} color={colorType(color)}>
+        <Text center bold h1 size={size || 16} color={colorType(color)}>
           {children}
         </Text>
       )}

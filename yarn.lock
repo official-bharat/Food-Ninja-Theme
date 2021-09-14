@@ -5323,6 +5323,11 @@
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
 
+"react-native-linear-gradient@^2.5.6":
+  "integrity" "sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg=="
+  "resolved" "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz"
+  "version" "2.5.6"
+
 "react-native-responsive-image@^2.3.1":
   "integrity" "sha512-I9/Z5uz60qGLXZ69wWd0P6pIB4SfMX94s66NvNttJjqP1MsK1LBD0wSP4Wj4sCNQk8uz08SvagFnQ9MOREHyPg=="
   "resolved" "https://registry.npmjs.org/react-native-responsive-image/-/react-native-responsive-image-2.3.1.tgz"
@@ -5345,7 +5350,7 @@
   dependencies:
     "warn-once" "^0.1.0"
 
-"react-native@*", "react-native@>=0.35", "react-native@>=0.65.0-rc.0 || 0.0.0-*", "react-native@0.65.1":
+"react-native@*", "react-native@>=0.35", "react-native@>=0.55", "react-native@>=0.65.0-rc.0 || 0.0.0-*", "react-native@0.65.1":
   "integrity" "sha512-0UOVSnlssweQZjuaUtzViCifE/4tXm8oRbxwakopc8GavPu9vLulde145GOw6QVYiOy4iL50f+2XXRdX9NmMeQ=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.65.1.tgz"
   "version" "0.65.1"

@@ -1,14 +1,22 @@
+import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 import {light} from './theme/colors';
 import {h1, h2, h3, title, body, caption, header} from './theme/fontsize';
 
-const componentStyles = () => {
+const componentStyles = colors => {
   return StyleSheet.create({
     // default style
     text: {
-      fontSize: 20,
-      color: '#231F20',
+      fontSize: 16,
+    },
+    main: {
+      color: colors.text,
+      fontFamily: 'BentonSans-Bold',
+    },
+    light: {
+      color: colors.subtitle,
+      fontFamily: 'BentonSans-Book',
     },
     // variations
     uppercase: {
@@ -18,16 +26,13 @@ const componentStyles = () => {
       fontWeight: 'normal',
     },
     bold: {
-      fontWeight: 'bold',
+      fontFamily: 'BentonSans-Bold',
     },
     semibold: {
       fontWeight: '700',
     },
     medium: {
       fontWeight: '500',
-    },
-    light: {
-      fontWeight: '200',
     },
     underline: {
       textDecorationLine: 'underline',
@@ -98,9 +103,11 @@ const CustomText = ({
   underline,
   margin,
   errorColor,
+  main,
   ...props
 }) => {
-  const styles = componentStyles();
+  const {colors, type} = useTheme();
+  const styles = componentStyles(colors, type);
   const handleMargins = () => {
     if (typeof margin === 'number') {
       return {
@@ -182,6 +189,7 @@ const CustomText = ({
     underline && styles.underline,
     errorColor && styles.errorColor,
     margin && {...handleMargins()},
+    main && styles.main,
     style, // rewrite predefined styles
   ];
   return (

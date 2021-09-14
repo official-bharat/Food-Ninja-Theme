@@ -17,6 +17,8 @@ const Default = {
     ...DefaultTheme.colors,
     primary: 'rgb(255, 45, 85)',
     background: '#FFFFFF',
+    text: '#09051C',
+    subtitle: '#000000',
   },
   type: 'light',
 };
@@ -26,6 +28,8 @@ const Dark = {
     ...DarkTheme.colors,
     primary: 'rgb(255, 45, 85)',
     background: '#0D0D0D',
+    text: '#FFFFFF',
+    subtitle: '#FFFFFF',
   },
   type: 'dark',
 };
