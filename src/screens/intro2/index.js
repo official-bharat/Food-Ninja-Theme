@@ -7,20 +7,20 @@ import {
 import {ImageComponent, Block, Text, Button} from '../../components';
 import {useNavigation} from '@react-navigation/native';
 import {RouteConstants} from '../../utils/constants';
-const Intro = () => {
+const IntroSecond = () => {
   const {type} = useTheme();
   const {navigate} = useNavigation();
   return (
     <Block primary>
       <Block flex={false} padding={[heightPercentageToDP(6), 0, 0]}>
         <ImageComponent
-          name={type === 'dark' ? 'intro_black' : 'intro_white'}
+          name={type === 'dark' ? 'intro2_black' : 'intro2_white'}
           width={409}
           height={435}
         />
       </Block>
       <Text main center size={25} height={33}>
-        Find your Comfort {'\n'} Food here
+        Food Ninja is Where Your {'\n'} Comfort Food Lives
       </Text>
       <Text
         margin={[heightPercentageToDP(3), 0, 0]}
@@ -28,12 +28,11 @@ const Intro = () => {
         height={22}
         light
         center>
-        Here You Can find a chef or dish for every {'\n'} taste and color.
-        Enjoy!
+        Enjoy a fast and smooth food delivery at {'\n'} your doorstep
       </Text>
       <Block margin={[heightPercentageToDP(4), 0, 0]} center flex={false}>
         <Button
-          onPress={() => navigate(RouteConstants.INTROSECOND)}
+          onPress={() => navigate(RouteConstants.LOGIN)}
           linear
           style={{width: widthPercentageToDP(40)}}
           color="primary">
@@ -44,4 +43,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default IntroSecond;

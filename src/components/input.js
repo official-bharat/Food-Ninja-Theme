@@ -1,3 +1,4 @@
+import {useTheme} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {Platform, StyleSheet, TextInput} from 'react-native';
 import {
@@ -9,7 +10,7 @@ import Button from './CustomButton';
 import Text from './Text';
 import {t1} from './theme/fontsize';
 
-const componentStyles = () => {
+const componentStyles = (colors, type) => {
   return StyleSheet.create({
     label: {
       marginBottom: heightPercentageToDP(0.8),
@@ -17,15 +18,24 @@ const componentStyles = () => {
     input: {
       paddingVertical:
         Platform.OS === 'ios'
-          ? heightPercentageToDP(1)
+          ? heightPercentageToDP(2)
           : heightPercentageToDP(0.3),
       paddingHorizontal: widthPercentageToDP(3),
-      borderWidth: 0.5,
-      borderColor: '#000',
-      borderRadius: 5,
+      borderWidth: 1,
+      borderColor: type === 'dark' ? 'transparent' : '#F4F4F4',
+      borderRadius: 10,
       fontSize: 14,
-      color: '#000',
-      backgroundColor: '#fff',
+      color: colors.inputColor,
+      backgroundColor: colors.inputBackground,
+      shadowColor: type === 'dark' ? 'transparent' : '#F6F8FD',
+      shadowOffset: {
+        width: 0,
+        height: 3,
+      },
+      shadowOpacity: 0.9,
+      shadowRadius: 4.65,
+
+      elevation: 2,
     },
     toggle: {
       // position: 'absolute',
@@ -56,7 +66,8 @@ const Input = ({
   placeholderTextColor,
   ...rest
 }) => {
-  const styles = componentStyles();
+  const {colors, type} = useTheme();
+  const styles = componentStyles(colors, type);
   const [toggleSecure, setToggleSecure] = useState(false);
   const renderLabel = () => (
     <Block flex={false}>
@@ -140,7 +151,7 @@ const Input = ({
         editable={editable}
         autoCorrect={false}
         keyboardType={inputType}
-        placeholderTextColor={errorText ? 'red' : '#000000'}
+        placeholderTextColor={errorText ? 'red' : colors.inputColor}
         {...rest}
       />
       {errorText && error && (

@@ -5,6 +5,7 @@ import {images} from '../../assets';
 import {ImageComponent, Block} from '../../components';
 import {useTheme} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/core';
+import {RouteConstants} from '../../utils/constants';
 
 const Splash = () => {
   const {colors, type} = useTheme();
@@ -18,7 +19,7 @@ const Splash = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigate('Intro');
+      navigate(RouteConstants.INTRO);
     }, 3000);
   }, []);
   return (

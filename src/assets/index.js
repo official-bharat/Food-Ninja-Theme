@@ -5,4 +5,8 @@ export const images = {
   bg_black: require('./icons/PatternBlack.png'),
   intro_black: require('./icons/intro_black.png'),
   intro_white: require('./icons/Intro_white.png'),
+  intro2_white: require('./icons/intro2_white.png'),
+  intro2_black: require('./icons/intro2_black.png'),
+  fb_icon: require('./icons/facebook.png'),
+  google_icon: require('./icons/google-icon.png'),
 };

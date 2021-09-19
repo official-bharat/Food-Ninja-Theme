@@ -5,8 +5,14 @@ import Text from './Text';
 import {light} from './theme/colors';
 import {t1, t2} from './theme/fontsize';
 import LinearGradient from 'react-native-linear-gradient';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from 'react-native-responsive-screen';
+import {ImageComponent} from '.';
+import {useTheme} from '@react-navigation/native';
 
-const componentStyles = () => {
+const componentStyles = (colors, type) => {
   return StyleSheet.create({
     button: {
       borderRadius: 10,
@@ -39,10 +45,19 @@ const componentStyles = () => {
       paddingVertical: t1 * 1.5,
     },
     transparent: {
-      backgroundColor: '#fff',
+      backgroundColor: colors.inputBackground,
       paddingVertical: t1 * 1.5,
-      borderColor: light.secondary,
+      borderColor: type === 'dark' ? 'transparent' : '#F4F4F4',
       borderWidth: 1,
+      shadowColor: type === 'dark' ? 'transparent' : '#F6F8FD',
+      shadowOffset: {
+        width: 0,
+        height: 3,
+      },
+      shadowOpacity: 0.9,
+      shadowRadius: 4.65,
+
+      elevation: 2,
     },
   });
 };
@@ -66,9 +81,16 @@ const Button = ({
   disabled,
   borderColor,
   linear,
+  iconStyle,
+  iconWithText,
+  iconHeight,
+  iconWidth,
+  iconColor,
+  textStyle,
   ...rest
 }) => {
-  const styles = componentStyles();
+  const {colors, type} = useTheme();
+  const styles = componentStyles(colors, type);
 
   const buttonStyles = [
     styles.button,
@@ -79,10 +101,6 @@ const Button = ({
     color && !styles[color] && {backgroundColor: color}, // custom backgroundColor
     style,
   ];
-
-  if (icon) {
-    return <Block style={buttonStyles}>{icon}</Block>;
-  }
 
   const colorType = type => {
     switch (type) {
@@ -121,6 +139,48 @@ const Button = ({
       </TouchableOpacity>
     );
   }
+  if (iconWithText) {
+    return (
+      <TouchableOpacity
+        style={[
+          buttonStyles,
+          disabled && styles.disabledButton,
+          {paddingVertical: heightPercentageToDP(2)},
+        ]}
+        disabled={!!disabled}
+        activeOpacity={disabled ? opacity || 0.8 : 0.2}
+        {...rest}>
+        {isLoading ? (
+          <ActivityIndicator size="small" color="#ffffff" />
+        ) : (
+          <Block flex={false} center middle row>
+            <Block flex={false} style={iconStyle}>
+              <ImageComponent
+                name={icon}
+                height={iconHeight}
+                width={iconWidth}
+                color={iconColor}
+              />
+            </Block>
+            <Text
+              medium
+              style={textStyle}
+              center
+              h1
+              size={size || 16}
+              margin={[
+                heightPercentageToDP(0.3),
+                0,
+                0,
+                widthPercentageToDP(3),
+              ]}>
+              {children}
+            </Text>
+          </Block>
+        )}
+      </TouchableOpacity>
+    );
+  }
   return (
     <TouchableOpacity
       style={[buttonStyles, disabled && styles.disabledButton]}
@@ -130,7 +190,7 @@ const Button = ({
       {isLoading ? (
         <ActivityIndicator size="small" color="#ffffff" />
       ) : (
-        <Text center bold h1 size={size || 16} color={colorType(color)}>
+        <Text medium center h1 size={size || 16}>
           {children}
         </Text>
       )}

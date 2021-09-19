@@ -8,6 +8,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from '../screens/splash';
 import {useColorScheme} from 'react-native';
 import Intro from '../screens/intro';
+import IntroSecond from '../screens/intro2';
+import {RouteConstants} from '../utils/constants';
+import LoginScreen from '../screens/login';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +22,8 @@ const Default = {
     background: '#FFFFFF',
     text: '#09051C',
     subtitle: '#000000',
+    inputBackground: '#FFFFFF',
+    inputColor: '#3B3B3B',
   },
   type: 'light',
 };
@@ -30,6 +35,8 @@ const Dark = {
     background: '#0D0D0D',
     text: '#FFFFFF',
     subtitle: '#FFFFFF',
+    inputBackground: '#252525',
+    inputColor: '#FFFFFF',
   },
   type: 'dark',
 };
@@ -42,8 +49,13 @@ function Routes() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Splash" component={Splash} />
-        <Stack.Screen name="Intro" component={Intro} />
+        <Stack.Screen name={RouteConstants.SPLASH} component={Splash} />
+        <Stack.Screen name={RouteConstants.INTRO} component={Intro} />
+        <Stack.Screen
+          name={RouteConstants.INTROSECOND}
+          component={IntroSecond}
+        />
+        <Stack.Screen name={RouteConstants.LOGIN} component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

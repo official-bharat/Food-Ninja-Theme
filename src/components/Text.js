@@ -18,6 +18,7 @@ const componentStyles = colors => {
       color: colors.subtitle,
       fontFamily: 'BentonSans-Book',
     },
+
     // variations
     uppercase: {
       textTransform: 'uppercase',
@@ -32,7 +33,8 @@ const componentStyles = colors => {
       fontWeight: '700',
     },
     medium: {
-      fontWeight: '500',
+      color: colors.text,
+      fontFamily: 'BentonSans-Medium',
     },
     underline: {
       textDecorationLine: 'underline',

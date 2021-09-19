@@ -16,6 +16,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8B7ACC4CDD5542F7BC4D1D1F /* BentonSans Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D9BB8075EEB463693462772 /* BentonSans Book.otf */; };
 		9DD21BFA88E469955AAD3169 /* libPods-FoodNinja-FoodNinjaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF96427E742C1D26BC5FDA0 /* libPods-FoodNinja-FoodNinjaTests.a */; };
+		06F17BC1E3C34CEF818F9ABA /* BentonSans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E75B48BBA58E67EB9CB31693 /* Pods-FoodNinja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNinja.release.xcconfig"; path = "Target Support Files/Pods-FoodNinja/Pods-FoodNinja.release.xcconfig"; sourceTree = "<group>"; };
 		EAF96427E742C1D26BC5FDA0 /* libPods-FoodNinja-FoodNinjaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodNinja-FoodNinjaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */ = {isa = PBXFileReference; name = "BentonSans Medium.otf"; path = "../src/assets/fonts/BentonSans Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				59651421C1124510872EA71C /* BentonSans Bold.otf */,
 				9D9BB8075EEB463693462772 /* BentonSans Book.otf */,
+				3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */,
 			);
 			name = Resources;
 			path = "";
@@ -262,6 +265,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				0F0074938BE4450284ABF30B /* BentonSans Bold.otf in Resources */,
 				8B7ACC4CDD5542F7BC4D1D1F /* BentonSans Book.otf in Resources */,
+				06F17BC1E3C34CEF818F9ABA /* BentonSans Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
