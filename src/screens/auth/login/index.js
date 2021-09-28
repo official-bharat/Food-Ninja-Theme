@@ -2,13 +2,14 @@ import React from 'react';
 import {ImageBackground} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/core';
-import {images} from '../../assets';
-import {ImageComponent, Block, Text, Input, Button} from '../../components';
+import {images} from '../../../assets';
+import {ImageComponent, Block, Text, Input, Button} from '../../../components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
+import {RouteConstants} from '../../../utils/constants';
 const LoginScreen = () => {
   const {colors, type} = useTheme();
   const {navigate} = useNavigation();
@@ -72,6 +73,16 @@ const LoginScreen = () => {
               Login
             </Button>
           </Block>
+          <Text
+            onPress={() => navigate(RouteConstants.SIGNUP)}
+            medium
+            margin={[hp(1), 0, 0]}
+            secondary
+            size={14}
+            center
+            underline>
+            Don't have an Account yet ? Signup
+          </Text>
         </Block>
       </SafeAreaView>
     </ImageBackground>

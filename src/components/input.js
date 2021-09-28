@@ -5,6 +5,7 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
+import {CustomButton, ImageComponent} from '.';
 import Block from './Block';
 import Button from './CustomButton';
 import Text from './Text';
@@ -27,15 +28,16 @@ const componentStyles = (colors, type) => {
       fontSize: 14,
       color: colors.inputColor,
       backgroundColor: colors.inputBackground,
-      shadowColor: type === 'dark' ? 'transparent' : '#F6F8FD',
+      shadowColor: type === 'dark' ? 'transparent' : 'rgba(90, 108, 234,0.3)',
+
       shadowOffset: {
         width: 0,
-        height: 3,
+        height: 7,
       },
-      shadowOpacity: 0.9,
-      shadowRadius: 4.65,
+      shadowOpacity: 0.41,
+      shadowRadius: 9.11,
 
-      elevation: 2,
+      elevation: 14,
     },
     toggle: {
       // position: 'absolute',
@@ -64,6 +66,13 @@ const Input = ({
   editable = true,
   center,
   placeholderTextColor,
+  leftPrefix,
+  rightPrefix,
+  iconWithInput,
+  iconHeight = 14,
+  iconWidth = 14,
+  iconColor,
+  rightIconOnPress,
   ...rest
 }) => {
   const {colors, type} = useTheme();
@@ -139,6 +148,47 @@ const Input = ({
     error && {borderColor: 'red', color: 'red'},
     style,
   ];
+
+  if (iconWithInput) {
+    return (
+      <Block
+        style={inputStyles}
+        flex={false}
+        margin={[heightPercentageToDP(1), 0]}
+        row
+        space="between">
+        <Block flex={false} row>
+          <Block flex={false} margin={[0, widthPercentageToDP(4), 0, 0]}>
+            <ImageComponent
+              name={leftPrefix}
+              height={iconHeight}
+              width={iconWidth}
+              color={iconColor}
+            />
+          </Block>
+          <TextInput
+            placeholder={placeholder}
+            style={{width: widthPercentageToDP(72), color: colors.inputColor}}
+            secureTextEntry={isSecure}
+            autoComplete="off"
+            autoCapitalize="none"
+            editable={editable}
+            autoCorrect={false}
+            keyboardType={inputType}
+            placeholderTextColor={errorText ? 'red' : colors.inputColor}
+          />
+        </Block>
+        <CustomButton flex={false} onPress={rightIconOnPress}>
+          <ImageComponent
+            name={rightPrefix}
+            height={iconHeight}
+            width={iconWidth}
+            color={iconColor}
+          />
+        </CustomButton>
+      </Block>
+    );
+  }
   return (
     <Block flex={false} margin={[heightPercentageToDP(1), 0]}>
       {renderLabel()}

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FoodNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodNinjaTests.m */; };
+		06F17BC1E3C34CEF818F9ABA /* BentonSans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */; };
 		0F0074938BE4450284ABF30B /* BentonSans Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 59651421C1124510872EA71C /* BentonSans Bold.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,7 +17,6 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8B7ACC4CDD5542F7BC4D1D1F /* BentonSans Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D9BB8075EEB463693462772 /* BentonSans Book.otf */; };
 		9DD21BFA88E469955AAD3169 /* libPods-FoodNinja-FoodNinjaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF96427E742C1D26BC5FDA0 /* libPods-FoodNinja-FoodNinjaTests.a */; };
-		06F17BC1E3C34CEF818F9ABA /* BentonSans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,17 +39,17 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FoodNinja/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FoodNinja/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FoodNinja/main.m; sourceTree = "<group>"; };
+		3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Medium.otf"; path = "../src/assets/fonts/BentonSans Medium.otf"; sourceTree = "<group>"; };
 		4909A295E76EE936319B98B6 /* Pods-FoodNinja-FoodNinjaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNinja-FoodNinjaTests.release.xcconfig"; path = "Target Support Files/Pods-FoodNinja-FoodNinjaTests/Pods-FoodNinja-FoodNinjaTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E1250EF4C1A5ED5271DB97A /* libPods-FoodNinja.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodNinja.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		59651421C1124510872EA71C /* BentonSans Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Bold.otf"; path = "../src/assets/fonts/BentonSans Bold.otf"; sourceTree = "<group>"; };
+		59651421C1124510872EA71C /* BentonSans Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Bold.otf"; path = "../src/assets/fonts/BentonSans Bold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FoodNinja/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847A7FE58BC5091AE417F236 /* Pods-FoodNinja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNinja.debug.xcconfig"; path = "Target Support Files/Pods-FoodNinja/Pods-FoodNinja.debug.xcconfig"; sourceTree = "<group>"; };
-		9D9BB8075EEB463693462772 /* BentonSans Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Book.otf"; path = "../src/assets/fonts/BentonSans Book.otf"; sourceTree = "<group>"; };
+		9D9BB8075EEB463693462772 /* BentonSans Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Book.otf"; path = "../src/assets/fonts/BentonSans Book.otf"; sourceTree = "<group>"; };
 		B5F022AD76A1E274B16BB59A /* Pods-FoodNinja-FoodNinjaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNinja-FoodNinjaTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodNinja-FoodNinjaTests/Pods-FoodNinja-FoodNinjaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E75B48BBA58E67EB9CB31693 /* Pods-FoodNinja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNinja.release.xcconfig"; path = "Target Support Files/Pods-FoodNinja/Pods-FoodNinja.release.xcconfig"; sourceTree = "<group>"; };
 		EAF96427E742C1D26BC5FDA0 /* libPods-FoodNinja-FoodNinjaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodNinja-FoodNinjaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */ = {isa = PBXFileReference; name = "BentonSans Medium.otf"; path = "../src/assets/fonts/BentonSans Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 				B5F022AD76A1E274B16BB59A /* Pods-FoodNinja-FoodNinjaTests.debug.xcconfig */,
 				4909A295E76EE936319B98B6 /* Pods-FoodNinja-FoodNinjaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -164,7 +163,6 @@
 				3A372CBE867046E0BEF5192F /* BentonSans Medium.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,7 +503,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FoodNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FoodNinja;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -531,7 +533,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,6 +549,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FoodNinja;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

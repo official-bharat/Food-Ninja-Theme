@@ -39,7 +39,7 @@ const componentStyles = (colors, type) => {
       borderWidth: 0,
     },
     accent: {backgroundColor: 'red'},
-    primary: {backgroundColor: '#000', paddingVertical: t1 * 2.2},
+    primary: {backgroundColor: '#000', paddingVertical: t1 * 2.5},
     secondary: {
       backgroundColor: light.secondary,
       paddingVertical: t1 * 1.5,

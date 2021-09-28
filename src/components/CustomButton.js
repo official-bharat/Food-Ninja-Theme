@@ -1,3 +1,4 @@
+import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {
   StyleSheet,
@@ -7,7 +8,7 @@ import {
 } from 'react-native';
 import {light} from './theme/colors';
 
-const componentStyles = () => {
+const componentStyles = (colors, type) => {
   return StyleSheet.create({
     block: {
       // flex: 1,
@@ -43,15 +44,16 @@ const componentStyles = () => {
       borderColor: '#0000001F',
     },
     shadow: {
-      shadowColor: '#000',
+      shadowColor: type === 'dark' ? 'transparent' : 'rgba(90, 108, 234,0.3)',
+
       shadowOffset: {
         width: 0,
-        height: 1,
+        height: 7,
       },
-      shadowOpacity: 0.22,
-      shadowRadius: 1.22,
+      shadowOpacity: 0.41,
+      shadowRadius: 9.11,
 
-      elevation: 2,
+      elevation: 14,
     },
     primary: {backgroundColor: light.primary},
     secondary: {backgroundColor: light.secondary},
@@ -91,7 +93,8 @@ const CustomButton = ({
   onPress,
   ...rest
 }) => {
-  const styles = componentStyles();
+  const {colors, type} = useTheme();
+  const styles = componentStyles(colors, type);
   const handleMargins = () => {
     if (typeof margin === 'number') {
       return {

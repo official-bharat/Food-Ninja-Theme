@@ -9,43 +9,24 @@ import Splash from '../screens/splash';
 import {useColorScheme} from 'react-native';
 import Intro from '../screens/intro';
 import IntroSecond from '../screens/intro2';
-import {RouteConstants} from '../utils/constants';
-import LoginScreen from '../screens/login';
+import {Dark, Default, RouteConstants} from '../utils/constants';
+import LoginScreen from '../screens/auth/login';
+import SignupScreen from '../screens/auth/signup';
+import Bio from '../screens/auth/bio';
+import PaymentMethod from '../screens/auth/payment';
+import UploadProfile from '../screens/auth/upload-profile';
+import PreviewPhoto from '../screens/auth/upload-profile/preview';
+import Congrats from '../screens/auth/congrats';
 
 const Stack = createNativeStackNavigator();
 
-const Default = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: 'rgb(255, 45, 85)',
-    background: '#FFFFFF',
-    text: '#09051C',
-    subtitle: '#000000',
-    inputBackground: '#FFFFFF',
-    inputColor: '#3B3B3B',
-  },
-  type: 'light',
-};
-const Dark = {
-  ...DarkTheme,
-  colors: {
-    ...DarkTheme.colors,
-    primary: 'rgb(255, 45, 85)',
-    background: '#0D0D0D',
-    text: '#FFFFFF',
-    subtitle: '#FFFFFF',
-    inputBackground: '#252525',
-    inputColor: '#FFFFFF',
-  },
-  type: 'dark',
-};
 function Routes() {
   const scheme = useColorScheme();
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? Dark : Default}>
       <Stack.Navigator
+        initialRouteName={RouteConstants.SPLASH}
         screenOptions={{
           headerShown: false,
         }}>
@@ -56,6 +37,18 @@ function Routes() {
           component={IntroSecond}
         />
         <Stack.Screen name={RouteConstants.LOGIN} component={LoginScreen} />
+        <Stack.Screen name={RouteConstants.SIGNUP} component={SignupScreen} />
+        <Stack.Screen name={RouteConstants.BIO} component={Bio} />
+        <Stack.Screen
+          name={RouteConstants.PAYMENTMETHOD}
+          component={PaymentMethod}
+        />
+        <Stack.Screen
+          name={RouteConstants.UPLOADPROFILE}
+          component={UploadProfile}
+        />
+        <Stack.Screen name={RouteConstants.PREVIEW} component={PreviewPhoto} />
+        <Stack.Screen name={RouteConstants.CONGRATS} component={Congrats} />
       </Stack.Navigator>
     </NavigationContainer>
   );
