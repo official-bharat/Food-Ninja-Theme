@@ -1,9 +1,10 @@
 import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, View, Animated, SafeAreaView} from 'react-native';
+import PropTypes from 'prop-types';
 import {light} from './theme/colors';
 
-const componentStyles = (colors, type) => {
+const componentStyles = (colors) => {
   return StyleSheet.create({
     block: {
       flex: 1,
@@ -67,7 +68,6 @@ const Block = ({
   right,
   top,
   bottom,
-  card,
   shadow,
   color,
   space,
@@ -135,7 +135,7 @@ const Block = ({
   const handleBorderWidth = () => {
     if (typeof borderWidth === 'number') {
       return {
-        borderWidth: borderWidth,
+        borderWidth,
       };
     }
     if (typeof borderWidth === 'object') {
@@ -182,7 +182,7 @@ const Block = ({
         borderBottomRightRadius: borderRadius,
       };
     }
-    if (typeof border === 'object') {
+    if (typeof borderRadius === 'object') {
       const border_Radius = Object.keys(borderRadius).length;
       switch (border_Radius) {
         case 1:
@@ -274,13 +274,12 @@ const Block = ({
     right && styles.right,
     top && styles.top,
     bottom && styles.bottom,
-    card && styles.card,
     shadow && styles.shadow,
     space && {justifyContent: `space-${space}`},
     baseline && styles.baseline,
-    alignSelf && {alignSelf: alignSelf},
+    alignSelf && {alignSelf},
     wrap && {flexWrap: 'wrap'},
-    borderColor && !styles[color] && {borderColor: borderColor},
+    borderColor && !styles[color] && {borderColor},
     borderColorDeafult && styles.borderColor,
     secondary && styles.secondary,
     margin && {...handleMargins()},
@@ -313,5 +312,41 @@ const Block = ({
     </View>
   );
 };
+Block.propTypes = {
+  // flex: PropTypes.number,
+  // grow: PropTypes.number,
+  // shrink: PropTypes.number,
+  // style: PropTypes.object,
+  safearea: PropTypes.bool,
+  flex: PropTypes.bool,
+  row: PropTypes.bool,
+  column: PropTypes.bool,
+  center: PropTypes.bool,
+  middle: PropTypes.bool,
+  left: PropTypes.bool,
+  right: PropTypes.bool,
+  top: PropTypes.bool,
+  bottom: PropTypes.bool,
+  shadow: PropTypes.bool,
+  color: PropTypes.string,
+  space: PropTypes.oneOf(['between', 'around']),
+  animated: PropTypes.bool,
+  wrap: PropTypes.bool,
+};
 
+Block.defaultProps = {
+  safearea: false,
+  flex: true,
+  row: false,
+  column: true,
+  center: false,
+  middle: false,
+  left: false,
+  right: false,
+  top: false,
+  bottom: false,
+  shadow: false,
+  color: '',
+  space: '',
+};
 export default Block;

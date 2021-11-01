@@ -1,10 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect} from 'react';
 import {ImageBackground} from 'react-native';
-import {images} from '../../assets';
-import {ImageComponent, Block} from '../../components';
 import {useTheme} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/core';
+import {images} from '../../assets';
+import {ImageComponent} from '../../components';
 import {RouteConstants} from '../../utils/constants';
 
 const Splash = () => {

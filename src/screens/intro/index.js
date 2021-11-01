@@ -1,12 +1,12 @@
-import {useTheme} from '@react-navigation/native';
+import {useTheme, useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 import {ImageComponent, Block, Text, Button} from '../../components';
-import {useNavigation} from '@react-navigation/native';
 import {RouteConstants} from '../../utils/constants';
+
 const Intro = () => {
   const {type} = useTheme();
   const {navigate} = useNavigation();

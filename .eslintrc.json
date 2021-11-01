@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/label-has-associated-control": [0, {}],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["id"]
+        }
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreRegExpLiterals": true,
+        "tabWidth": 2
+      }
+    ],
+    "no-console": [1],
+    "linebreak-style": "off",
+    "react/jsx-one-expression-per-line": [
+      0,
+      {
+        "allow": "literal"
+      }
+    ],
+    "max-classes-per-file": 0,
+    "no-useless-catch": 0,
+    "no-async-promise-executor": 0,
+    "no-misleading-character-class": 0,
+    "import/no-extraneous-dependencies": 0,
+    "prefer-object-spread": 0,
+    "camelcase": "off",
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "react/jsx-filename-extension": [0],
+    "react/jsx-fragments": [0],
+    "react/jsx-no-target-blank": "off",
+    "no-plusplus": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "all",
+        "semi": true
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off"
+  }
+}

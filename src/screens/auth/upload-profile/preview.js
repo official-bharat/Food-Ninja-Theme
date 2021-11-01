@@ -1,13 +1,12 @@
-import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {useNavigation} from '@react-navigation/core';
 import Breadcrumb from '../../../common/breadcrumb';
 import {Block, Button, ImageComponent} from '../../../components';
 import {RouteConstants} from '../../../utils/constants';
-import {useNavigation} from '@react-navigation/core';
 
 const PreviewPhoto = () => {
   const {navigate} = useNavigation();

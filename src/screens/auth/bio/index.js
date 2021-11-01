@@ -7,6 +7,7 @@ import {
 import Breadcrumb from '../../../common/breadcrumb';
 import {Block, Button, Input} from '../../../components';
 import {RouteConstants} from '../../../utils/constants';
+
 const Bio = () => {
   const {navigate} = useNavigation();
   return (

@@ -4,10 +4,10 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {Block, Button, ImageComponent, Text} from '../../../components';
-import {RouteConstants} from '../../../utils/constants';
 import {useNavigation} from '@react-navigation/core';
 import {ImageBackground} from 'react-native';
+import {Block, Button, ImageComponent, Text} from '../../../components';
+import {RouteConstants} from '../../../utils/constants';
 import {images} from '../../../assets';
 
 const Congrats = () => {

@@ -4,10 +4,10 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {useNavigation} from '@react-navigation/core';
 import Breadcrumb from '../../../common/breadcrumb';
 import {Block, Button, CustomButton, ImageComponent} from '../../../components';
 import {RouteConstants} from '../../../utils/constants';
-import {useNavigation} from '@react-navigation/core';
 
 const PaymentMethod = () => {
   const {navigate} = useNavigation();
@@ -19,7 +19,7 @@ const PaymentMethod = () => {
   return (
     <Block safearea>
       <Breadcrumb
-        title={'Payment Method'}
+        title="Payment Method"
         subtitle={
           'This data will be displayed in your account \nprofile for security'
         }

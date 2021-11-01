@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {useNavigation} from '@react-navigation/core';
 import Breadcrumb from '../../../common/breadcrumb';
 import {
   Block,
@@ -13,7 +14,6 @@ import {
   Text,
 } from '../../../components';
 import {RouteConstants} from '../../../utils/constants';
-import {useNavigation} from '@react-navigation/core';
 
 const UploadProfile = () => {
   const {navigate} = useNavigation();

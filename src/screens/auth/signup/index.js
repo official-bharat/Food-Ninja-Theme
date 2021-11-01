@@ -2,15 +2,16 @@ import React, {useState} from 'react';
 import {ImageBackground} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/core';
-import {images} from '../../../assets';
-import {ImageComponent, Block, Text, Input, Button} from '../../../components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
+import {images} from '../../../assets';
+import {ImageComponent, Block, Text, Input, Button} from '../../../components';
 import {RouteConstants} from '../../../utils/constants';
 import Checkbox from '../../../components/checkbox';
+
 const SignUpScreen = () => {
   const [toggle, setToggle] = useState({
     eye: true,
@@ -57,21 +58,21 @@ const SignUpScreen = () => {
         <Block margin={[hp(3), wp(4)]} flex={false}>
           <Input
             iconWithInput
-            leftPrefix={'username_icon'}
+            leftPrefix="username_icon"
             iconHeight={20}
             iconWidth={20}
             placeholder="Username"
           />
           <Input
             iconWithInput
-            leftPrefix={'email_icon'}
+            leftPrefix="email_icon"
             iconHeight={20}
             iconWidth={20}
             placeholder="Email"
           />
           <Input
             iconWithInput
-            leftPrefix={'password_icon'}
+            leftPrefix="password_icon"
             iconHeight={20}
             iconWidth={20}
             placeholder="Password"

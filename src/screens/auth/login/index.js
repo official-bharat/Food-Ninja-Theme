@@ -2,14 +2,15 @@ import React from 'react';
 import {ImageBackground} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/core';
-import {images} from '../../../assets';
-import {ImageComponent, Block, Text, Input, Button} from '../../../components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
+import {images} from '../../../assets';
+import {ImageComponent, Block, Text, Input, Button} from '../../../components';
 import {RouteConstants} from '../../../utils/constants';
+
 const LoginScreen = () => {
   const {colors, type} = useTheme();
   const {navigate} = useNavigation();
@@ -41,7 +42,7 @@ const LoginScreen = () => {
           </Text>
           <Block margin={[hp(1), 0, 0]} row space="around" flex={false}>
             <Button
-              iconWithText={true}
+              iconWithText
               icon="fb_icon"
               iconHeight={25}
               iconWidth={25}
@@ -50,7 +51,7 @@ const LoginScreen = () => {
               Facebook
             </Button>
             <Button
-              iconWithText={true}
+              iconWithText
               icon="google_icon"
               iconHeight={25}
               iconWidth={25}
@@ -81,7 +82,7 @@ const LoginScreen = () => {
             size={14}
             center
             underline>
-            Don't have an Account yet ? Signup
+            Don&apos;t have an Account yet ? Signup
           </Text>
         </Block>
       </SafeAreaView>
