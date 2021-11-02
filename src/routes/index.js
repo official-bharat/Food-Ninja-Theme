@@ -1,12 +1,8 @@
 import * as React from 'react';
-import {
-  NavigationContainer,
-  DefaultTheme,
-  DarkTheme,
-} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Splash from '../screens/splash';
 import {useColorScheme} from 'react-native';
+import Splash from '../screens/splash';
 import Intro from '../screens/intro';
 import IntroSecond from '../screens/intro2';
 import {Dark, Default, RouteConstants} from '../utils/constants';

@@ -5,7 +5,7 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {CustomButton, ImageComponent} from '.';
+import {CustomButton, ImageComponent} from './index';
 import Block from './Block';
 import Button from './CustomButton';
 import Text from './Text';
@@ -84,7 +84,7 @@ const Input = ({
         <Text
           errorColor={errorText}
           size={14}
-          center={center ? true : false}
+          center={!!center}
           style={styles.label}
           black={!error}
           accent={error}

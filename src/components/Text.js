@@ -4,7 +4,7 @@ import {Text, StyleSheet} from 'react-native';
 import {light} from './theme/colors';
 import {h1, h2, h3, title, body, caption, header} from './theme/fontsize';
 
-const componentStyles = colors => {
+const componentStyles = (colors) => {
   return StyleSheet.create({
     // default style
     text: {
@@ -18,7 +18,6 @@ const componentStyles = colors => {
       color: colors.subtitle,
       fontFamily: 'BentonSans-Book',
     },
-
     // variations
     uppercase: {
       textTransform: 'uppercase',

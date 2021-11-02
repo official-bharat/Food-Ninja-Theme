@@ -1,16 +1,16 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, ActivityIndicator} from 'react-native';
-import Block from './Block';
-import Text from './Text';
-import {light} from './theme/colors';
-import {t1, t2} from './theme/fontsize';
 import LinearGradient from 'react-native-linear-gradient';
 import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {ImageComponent} from '.';
 import {useTheme} from '@react-navigation/native';
+import Block from './Block';
+import Text from './Text';
+import {light} from './theme/colors';
+import {t1, t2} from './theme/fontsize';
+import {ImageComponent} from '.';
 
 const componentStyles = (colors, type) => {
   return StyleSheet.create({
@@ -102,7 +102,7 @@ const Button = ({
     style,
   ];
 
-  const colorType = type => {
+  const colorType = (type) => {
     switch (type) {
       case 'secondary':
         return '#fff';
@@ -131,7 +131,7 @@ const Button = ({
           {isLoading ? (
             <ActivityIndicator size="small" color="#ffffff" />
           ) : (
-            <Text bold center regular h1 size={size || 17} color={'white'}>
+            <Text bold center regular h1 size={size || 17} color="white">
               {children}
             </Text>
           )}
